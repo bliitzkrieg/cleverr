@@ -1,0 +1,35 @@
+<ion-view hide-nav-bar="true">
+  <ion-content padding="true">
+
+      <div class="row cleverr-home-brand">
+        <div class="cleverr-home-logo">
+          <img src="/img/logo.svg" height="65"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <a class="button button-block button-stable cleverr-background-hook" ui-sref="cleverr.register">
+            <div class="cleverr-background-container"></div>
+            Sign up with Email
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button class="button button-block button-positive no-margin" ng-click="homeCtrl.loginWithFacebook()">
+            Login with Facebook
+          </button>
+        </div>
+      </div>
+
+    <div class="row">
+      <div class="col text-center">
+        Or <a email-login control="homeCtrl.loginControl" ng-click="homeCtrl.loginControl.openLogin()">Login</a>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
+

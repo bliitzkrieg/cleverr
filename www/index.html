@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Cleverr</title>
+
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- Parse SDK -->
+    <script src="//www.parsecdn.com/js/parse-1.6.12.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- App -->
+    <script src="js/app.module.js"></script>
+    <script src="js/app.routes.js"></script>
+
+    <!--<script src="js/controllers.js"></script>-->
+
+    <!-- Home -->
+    <script src="home/home.module.js"></script>
+    <script src="home/home.routes.js"></script>
+    <script src="home/home.controller.js"></script>
+
+    <!-- Register -->
+    <script src="register/register.module.js"></script>
+    <script src="register/register.routes.js"></script>
+    <script src="register/register.controller.js"></script>
+
+    <!-- Login -->
+    <script src="components/login/login.directive.js"></script>
+
+    <!-- Swiper -->
+    <script src="swiper/swiper.module.js"></script>
+    <script src="swiper/swiper.routes.js"></script>
+    <script src="swiper/swiper.controller.js"></script>
+
+    <!-- Parse -->
+    <script src="services/parse.service.js"></script>
+
+  </head>
+
+  <body ng-app="cleverr">
+    <!--<ion-nav-view></ion-nav-view>-->
+    <div ui-view></div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+.cleverr-home-brand {
+  height: calc(100vh - 35%);
+  padding-top: 80px;
+}
+
+.cleverr-home-logo {
+    width: 100%;
+    text-align: center;
+}
+
+.cleverr-background-hook {
+  position: relative;
+}
+
+.cleverr-background-container {
+  position: absolute;
+  bottom: 30px;
+  z-index: -1;
+  background: url(http://thumb1.shutterstock.com/display_pic_with_logo/358786/358786,1307284512,18/stock-photo-close-up-of-young-man-looking-up-78671338.jpg) no-repeat center;
+  background-size: contain;
+  height: 300px;
+  width: 100%;
+}
