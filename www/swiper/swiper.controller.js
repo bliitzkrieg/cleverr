@@ -1,12 +1,12 @@
 (function () {
   'use strict';
 
-  function SwiperController() {
+  function SwiperController($ionicSideMenuDelegate) {
     var vm = this;
   }
 
-  SwiperController.$inject = [];
+  SwiperController.$inject = ['$ionicSideMenuDelegate'];
 
-  angular.module('cleverr.swiper.controller', ['ui.router'])
+  angular.module('cleverr.swiper.controller', [])
     .controller('SwiperController', SwiperController);
 })();

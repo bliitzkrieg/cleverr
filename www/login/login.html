@@ -1,0 +1,26 @@
+<ion-view>
+  <ion-content padding="true">
+
+    <p>Fill out below to login</p>
+
+    <form name="loginForm" ng-submit="logCtrl.doLogin()" novalidate>
+
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="logCtrl.loginData.username" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="logCtrl.loginData.password" required>
+        </label>
+        <label class="item">
+          <button class="button button-block button-stable" type="submit">Log in</button>
+        </label>
+        <div ng-messages="loginForm.$error" ng-show="loginForm.$submitted && loginForm.$error" style="color:maroon;margin: 20px 0 0 0" role="alert">
+          <div ng-message="required">Both the username and password are required</div>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

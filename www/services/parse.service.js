@@ -11,7 +11,7 @@
       return Parse.User.current().attributes.sessionToken;
     };
 
-    this.getId = function () {
+    this.getUserId = function () {
       return Parse.User.current().id;
     };
 
@@ -54,6 +54,16 @@
           return error;
         }
       });
+    };
+
+    this.shareIdea = function (payload) {
+      var Idea = Parse.Object.extend("Question"),
+        idea = new Idea();
+
+      idea.set("content", payload.content);
+      idea.set("user", this.getUser());
+
+      return idea.save();
     };
 
   }

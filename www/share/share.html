@@ -1,0 +1,18 @@
+<ion-view style="padding-top: 40px">
+  <ion-content padding="true">
+    {{ shrCtrl.error }}
+    <form name="shareForm" ng-submit="shrCtrl.shareIdea()" novalidate>
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Share your idea:</span>
+          <textarea ng-model="shrCtrl.idea" placeholder="An app that is used to share ideas..."></textarea>
+          <div style="float:right;margin-right: 10px;font-size:12px;color:#cccccc;">{{shrCtrl.idea.length}} / 300</div>
+        </label>
+      </div>
+
+      <label class="item">
+        <button class="button button-block button-stable" type="submit">Share</button>
+      </label>
+    </form>
+  </ion-content>
+</ion-view>

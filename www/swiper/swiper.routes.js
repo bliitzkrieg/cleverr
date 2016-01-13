@@ -9,8 +9,13 @@
       views: {
         "@cleverr": {
           templateUrl: "/swiper/swiper.html",
-          controller:"SwiperController",
-          controllerAs:'swpCtrl'
+          controller: "SwiperController",
+          controllerAs: 'swpCtrl'
+        },
+        "menu@cleverr": {
+          templateUrl: "/menu/menu.html",
+          controller:"MenuController",
+          controllerAs:'mnuCtrl'
         }
       },
       resolve: {
