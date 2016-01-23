@@ -4,6 +4,9 @@
   function HomeController(ParseService, $state) {
     var vm = this;
 
+    vm.randomNumber = Math.floor((Math.random() * 4) + 1);
+    console.log(vm.randomNumber);
+
     vm.loginControl = {};
 
     vm.loginWithFacebook = function() {
