@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  function ParseService() {
+  function ParseService($q) {
 
     this.isLoggedIn = function() {
       return Parse.User.current();
@@ -56,6 +56,24 @@
       });
     };
 
+    this.getIdeas = function () {
+      var Idea = Parse.Object.extend("Question");
+      var query = new Parse.Query(Idea);
+      query.notEqualTo("user", this.getUser());
+      var deferred = $q.defer();
+
+      query.find({
+        success: function (success) {
+          deferred.resolve(success);
+        },
+        error: function(error) {
+          deferred.reject(error);
+        }
+      });
+
+      return deferred.promise;
+    };
+
     this.shareIdea = function (payload) {
       var Idea = Parse.Object.extend("Question"),
         idea = new Idea();
@@ -66,11 +84,40 @@
       return idea.save();
     };
 
+    this.loginWithFacebook = function() {
+
+      
+
+      var deferred = $q.defer();
+
+      Parse.FacebookUtils.logIn(null, {
+        success: function(user) {
+          deferred.resolve(user);
+        },
+        error: function(user, error) {
+          deferred.reject(error);
+        }
+      });
+
+      return deferred.promise;
+    };
+
+    this.voteOnIdea = function(userAnswer, question) {
+      var Answer = Parse.Object.extend("Answer"),
+          answer = new Answer();
+
+      answer.set("response", userAnswer);
+      answer.set("question", question);
+      answer.set("user", this.getUser());
+
+      return answer.save();
+    };
+
   }
 
 
   //Inject the auth service dependencies
-  ParseService.$inject = [];
+  ParseService.$inject = ['$q'];
 
   //Create Module
   angular

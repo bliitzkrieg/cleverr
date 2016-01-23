@@ -19,7 +19,9 @@
         }
       },
       resolve: {
-
+        Ideas: ['ParseService', function(ParseService) {
+          return ParseService.getIdeas();
+        }]
       },
       authenticate: true
     });
@@ -28,7 +30,7 @@
   routes.$inject = ['$stateProvider'];
 
   angular
-    .module('cleverr.swiper.routes', ['ui.router'])
+    .module('cleverr.swiper.routes', ['ui.router', 'cleverr.parse'])
     .config(routes);
 
 })();

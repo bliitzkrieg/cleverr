@@ -1,19 +1,23 @@
 (function () {
   'use strict';
 
-  function HomeController() {
+  function HomeController(ParseService, $state) {
     var vm = this;
 
     vm.loginControl = {};
 
     vm.loginWithFacebook = function() {
-      alert();
+      ParseService.loginWithFacebook().then(function(success){
+        $state.go('cleverr.swiper');
+      }, function(error){
+        console.log(error); //todo: handle error
+      })
     };
 
   }
 
-  HomeController.$inject = [];
+  HomeController.$inject = ['ParseService', '$state'];
 
-  angular.module('cleverr.home.controller', ['ui.router', 'cleverr.login'])
+  angular.module('cleverr.home.controller', ['ui.router', 'cleverr.login', 'cleverr.parse'])
     .controller('HomeController', HomeController);
 })();

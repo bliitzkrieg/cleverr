@@ -5,7 +5,20 @@
   </ion-nav-buttons>
 
   <ion-content has-header="true" padding="true">
-    Swiper here
-    <a ui-sref="cleverr.share">click</a>
+
+    <td-cards>
+      <td-card ng-repeat="idea in swpCtrl.ideas"
+               on-swipe-left="swpCtrl.onSwipedLeft($index, idea)"
+               on-swipe-right="swpCtrl.onSwipedRight($index, idea)"
+               on-destroy="onDestroyed($index)">
+        {{ idea.attributes.content }}
+      </td-card>
+    </td-cards>
+
+    <div class="swiper-options">
+      <div class="swiper--option --good" title="Good Idea" ng-click="swpCtrl.vote('good')"><div class="swiper--action-icon ion-heart"></div></div>
+      <div class="swiper--option --bad" title="Bad Idea" ng-click="swpCtrl.vote('bad')"><div class="swiper--action-icon ion-close-round"></div></div>
+    </div>
+
   </ion-content>
 </ion-view>

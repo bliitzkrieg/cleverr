@@ -1,0 +1,36 @@
+.swiper-options {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+$circle-radius: 75px;
+.swiper--option {
+  width: $circle-radius;
+  height: $circle-radius;
+  border-radius: $circle-radius / 2;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $cleverr-white;
+
+  &.--good {
+    background: $cleverr-main;
+    &:active {
+      background: darken($cleverr-main, 10%);
+    }
+  }
+  &.--bad {
+    background: $cleverr-error;
+    &:active {
+      background: darken($cleverr-error, 10%);
+    }
+  }
+}
+
+.swiper--action-icon {
+  font-size: 32px;
+}
+

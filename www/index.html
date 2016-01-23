@@ -5,7 +5,12 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Cleverr</title>
 
-    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="css/ionic.app.css" rel="stylesheet" />
+
+  </head>
+
+  <body ng-app="cleverr">
+    <div ui-view></div>
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -54,10 +59,10 @@
     <!-- Parse -->
     <script src="services/parse.service.js"></script>
 
-  </head>
+    <!-- Collide -->
+    <script src="lib/collide/collide.js"></script>
 
-  <body ng-app="cleverr">
-    <!--<ion-nav-view></ion-nav-view>-->
-    <div ui-view></div>
+    <!-- Tinder Swipe Cards -->
+    <script src="lib/ionic-ion-tinder-cards/ionic.tdcards.js"></script>
   </body>
 </html>
