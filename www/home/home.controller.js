@@ -3,6 +3,10 @@
 
   function HomeController(AuthService, $state) {
     var vm = this;
+
+    vm.randomNumber = Math.floor((Math.random() * 4) + 1);
+    console.log(vm.randomNumber);
+
     vm.loginControl = {};
 
     vm.loginWithFacebook = function() {
@@ -12,6 +16,7 @@
         console.log(error); //todo: handle error
       });
     };
+
   }
 
   HomeController.$inject = ['AuthService', '$state'];

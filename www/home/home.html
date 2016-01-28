@@ -1,16 +1,16 @@
 <ion-view hide-nav-bar="true">
-  <ion-content padding="true">
+  <ion-content padding="true" class="cleverr-background-color">
 
       <div class="row cleverr-home-brand">
         <div class="cleverr-home-logo">
-          <img src="/img/logo.svg" height="65"/>
+          <img src="/img/logo_2.svg" height="65"/>
         </div>
       </div>
 
       <div class="row">
         <div class="col">
           <a class="button button-block button-stable no-margin cleverr-background-hook" ui-sref="cleverr.register">
-            <div class="cleverr-background-container"></div>
+            <div class="cleverr-background-container bg-{{ homeCtrl.randomNumber }}"></div>
             Sign up with Email
           </a>
         </div>

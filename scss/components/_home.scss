@@ -16,8 +16,22 @@
   position: absolute;
   bottom: 0;
   z-index: -1;
-  background: url(http://thumb1.shutterstock.com/display_pic_with_logo/358786/358786,1307284512,18/stock-photo-close-up-of-young-man-looking-up-78671338.jpg) no-repeat center;
   background-size: contain;
   height: 300px;
   width: 100%;
+  &.bg-1 {
+    background: url(/img/darth_maul.png) no-repeat center;
+  }
+  &.bg-2 {
+    background: url(/img/dr_evil.png) no-repeat center;
+  }
+  &.bg-3 {
+    background: url(/img/wizard.png) no-repeat center;
+  }
+  &.bg-4 {
+    background: url(/img/look_up_4.png) no-repeat center;
+  }
+}
+.cleverr-background-color{
+    background-color:#222;
 }
