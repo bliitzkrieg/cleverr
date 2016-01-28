@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  function ShareController(ParseService, $state, $ionicHistory) {
+  function ShareController(FireService, $state, $ionicHistory) {
     var vm = this;
     vm.idea = "";
 
@@ -10,7 +10,7 @@
         content: vm.idea
       };
 
-      ParseService.shareIdea(payload).then(function() {
+      FireService.postIdea(payload).then(function() {
           $ionicHistory.nextViewOptions({
             disableBack: true
           });
@@ -21,8 +21,8 @@
     }
   }
 
-  ShareController.$inject = ['ParseService', '$state', '$ionicHistory'];
+  ShareController.$inject = ['FireService', '$state', '$ionicHistory'];
 
-  angular.module('cleverr.share.controller', ['cleverr.parse', 'ui.router'])
+  angular.module('cleverr.share.controller', ['cleverr.fire', 'ui.router'])
     .controller('ShareController', ShareController);
 })();

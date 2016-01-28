@@ -1,43 +1,23 @@
 (function () {
   'use strict';
 
-  function SwiperController(Ideas, $ionicSideMenuDelegate, TDCardDelegate, ParseService) {
+  function SwiperController(Ideas, FireService) {
     var vm = this;
     vm.ideas = Ideas;
 
-    function doVote(answer, question) {
-      ParseService.voteOnIdea(answer).then(function(success) {
-        console.log('vote went through');
-      }, function (error) {
-        console.log('an error occured voting');
-      });
-    }
-
-    vm.onSwipedLeft = function(index, question) {
-      doVote(true, question);
-    };
-
-    vm.onSwipedRight = function(index, question) {
-      doVote(false, question);
-    };
-
-    vm.onDestroyed = function() {
-
-    };
 
     vm.vote = function(action) {
-      if (action === 'good') {
-        console.log(action);
-      }
-      else {
-        console.log(action);
-      }
+      alert(action);
     };
+
+    vm.move = function (e, s) {
+      console.log(e, s);
+    }
 
   }
 
-  SwiperController.$inject = ['Ideas', '$ionicSideMenuDelegate', 'TDCardDelegate', 'ParseService'];
+  SwiperController.$inject = ['Ideas', 'FireService'];
 
-  angular.module('cleverr.swiper.controller', ['ionic.contrib.ui.tinderCards', 'cleverr.parse'])
+  angular.module('cleverr.swiper.controller', ['gajus.swing', 'cleverr.fire'])
     .controller('SwiperController', SwiperController);
 })();

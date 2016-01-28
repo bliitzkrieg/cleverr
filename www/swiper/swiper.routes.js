@@ -19,8 +19,8 @@
         }
       },
       resolve: {
-        Ideas: ['ParseService', function(ParseService) {
-          return ParseService.getIdeas();
+        Ideas: ['FireService', function(FireService) {
+          return FireService.getIdeas();
         }]
       },
       authenticate: true
@@ -30,7 +30,7 @@
   routes.$inject = ['$stateProvider'];
 
   angular
-    .module('cleverr.swiper.routes', ['ui.router', 'cleverr.parse'])
+    .module('cleverr.swiper.routes', ['ui.router', 'cleverr.fire'])
     .config(routes);
 
 })();

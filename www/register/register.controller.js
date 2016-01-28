@@ -1,25 +1,26 @@
 (function () {
   'use strict';
 
-  function RegisterController(ParseService) {
+  function RegisterController(FireService, $state) {
     var vm = this;
     vm.registerData = {};
 
     vm.doRegister = function() {
-      //Do validation
+      //todo: Do validation
 
-      ParseService.register(vm.registerData).then(function(success) {
-        console.log(success);
+      FireService.signUp(vm.registerData).then(function() {
+        $state.go('cleverr.swiper');
       }, function(error) {
         console.log(error);
+        //todo: Handle error
       });
 
     }
 
   }
 
-  RegisterController.$inject = ['ParseService'];
+  RegisterController.$inject = ['FireService', '$state'];
 
-  angular.module('cleverr.register.controller', ['ui.router', 'cleverr.parse'])
+  angular.module('cleverr.register.controller', ['ui.router', 'cleverr.fire'])
     .controller('RegisterController', RegisterController);
 })();

@@ -5,6 +5,6 @@
     "ionic": "driftyco/ionic-bower#1.2.1"
   },
   "dependencies": {
-    "ionic-ion-tinder-cards": "ionic-contrib-tinder-cards#*"
+    "angular-swing": "*"
   }
 }

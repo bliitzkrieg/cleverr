@@ -1,28 +1,7 @@
 (function () {
   'use strict';
 
-  function runBlock($rootScope, $ionicPlatform, ParseService, $state, $ionicHistory) {
-
-    Parse.initialize("9vE3KcQxpK8qmbOkh9N3HtLAPaxiPTtXPXRoSNbp", "CSYfe6COA7MWQMf6tyVFExxFiKSjSKIYZJKQSRbf");
-
-    window.fbAsyncInit = function() {
-      Parse.FacebookUtils.init({ // this line replaces FB.init({
-        appId      : '1559156141043200', // Facebook App ID
-        status     : true,  // check Facebook Login status
-        cookie     : true,  // enable cookies to allow Parse to access the session
-        xfbml      : true,  // initialize Facebook social plugins on the page
-        version    : 'v2.3' // point to the latest Facebook Graph API version
-      });
-
-    };
-
-    (function(d, s, id){
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+  function runBlock($rootScope, $ionicPlatform, AuthService, $state, $ionicHistory) {
 
     $ionicPlatform.ready(function () {
 
@@ -42,7 +21,7 @@
 
 
     $rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState) {
-      var user = ParseService.isLoggedIn();
+      var user = AuthService.isLoggedIn();
 
       if(!user && toState.authenticate) {
         event.preventDefault();
@@ -56,20 +35,21 @@
 
   }
 
-  runBlock.$inject = ['$rootScope', '$ionicPlatform', 'ParseService', '$state', '$ionicHistory'];
+  runBlock.$inject = ['$rootScope', '$ionicPlatform', 'AuthService', '$state', '$ionicHistory'];
 
   angular.module('cleverr', [
       'ionic',
+      'firebase',
+      'ui.router',
+
       'cleverr.routes',
       'cleverr.home',
-      'cleverr.parse',
+      'cleverr.fire',
       'cleverr.login',
       'cleverr.register',
       'cleverr.swiper',
       'cleverr.share',
-      'cleverr.menu',
-
-      'ui.router'
+      'cleverr.menu'
     ])
     .run(runBlock);
 

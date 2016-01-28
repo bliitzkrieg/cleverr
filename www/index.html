@@ -15,8 +15,11 @@
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
-    <!-- Parse SDK -->
-    <script src="//www.parsecdn.com/js/parse-1.6.12.min.js"></script>
+    <!-- Fire SDK -->
+    <script src="lib/firebase/firebase.js"></script>
+
+    <!-- Angular Fire -->
+    <script src="lib/angularfire/dist/angularfire.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -25,7 +28,12 @@
     <script src="js/app.module.js"></script>
     <script src="js/app.routes.js"></script>
 
-    <!--<script src="js/controllers.js"></script>-->
+    <!-- Firebase -->
+    <script src="services/fire.service.js"></script>
+
+    <!-- AuthService -->
+    <script src="services/auth.service.js"></script>
+
 
     <!-- Home -->
     <script src="home/home.module.js"></script>
@@ -56,13 +64,7 @@
     <script src="swiper/swiper.routes.js"></script>
     <script src="swiper/swiper.controller.js"></script>
 
-    <!-- Parse -->
-    <script src="services/parse.service.js"></script>
-
-    <!-- Collide -->
-    <script src="lib/collide/collide.js"></script>
-
-    <!-- Tinder Swipe Cards -->
-    <script src="lib/ionic-ion-tinder-cards/ionic.tdcards.js"></script>
+    <!-- Swipe Cards -->
+    <script src="lib/angular-swing/dist/angular-swing.js"></script>
   </body>
 </html>
