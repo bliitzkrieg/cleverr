@@ -33,6 +33,10 @@
       return auth.$authWithOAuthPopup("facebook")
     }
 
+    function loginWithTwitter() {
+      return auth.$authWithOAuthPopup("twitter")
+    }
+
     return {
       getAuth: getAuth,
       getRef: getRef,
@@ -40,7 +44,8 @@
       logout: logout,
       isLoggedIn: isLoggedIn,
       currentUser: currentUser,
-      loginWithFacebook: loginWithFacebook
+      loginWithFacebook: loginWithFacebook,
+      loginWithTwitter: loginWithTwitter
     };
   }
 

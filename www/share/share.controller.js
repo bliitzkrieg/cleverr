@@ -11,12 +11,13 @@
       };
 
       FireService.postIdea(payload).then(function() {
+          vm.idea = "";
           $ionicHistory.nextViewOptions({
             disableBack: true
           });
           $state.go('cleverr.swiper');
       }, function(error) {
-          vm.error = "An error occured";
+          vm.error = "An error occurred";
       });
     }
   }
