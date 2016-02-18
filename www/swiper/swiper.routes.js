@@ -3,21 +3,11 @@
 
   function routes($stateProvider) {
 
-    $stateProvider.state('cleverr.swiper', {
-      parent: 'cleverr',
+    $stateProvider.state('cleverr.authenticated.swiper', {
       url: "/swiper",
-      views: {
-        "@cleverr": {
-          templateUrl: "/swiper/swiper.html",
-          controller: "SwiperController",
-          controllerAs: 'swpCtrl'
-        },
-        "menu@cleverr": {
-          templateUrl: "/menu/menu.html",
-          controller:"MenuController",
-          controllerAs:'mnuCtrl'
-        }
-      },
+      templateUrl: "/swiper/swiper.html",
+      controller: "SwiperController",
+      controllerAs: 'swpCtrl',
       resolve: {
         Ideas: ['FireService', function(FireService) {
           return FireService.getIdeas();

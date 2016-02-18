@@ -17,6 +17,9 @@ $dark:                            #444 !default;
  *  External Colors
  *****************************************************************************/
 /******************************************************************************
+ *  Font
+ *****************************************************************************/
+/******************************************************************************
  *  Override Ionic Colors
  *****************************************************************************/
 /* stable */
@@ -9726,6 +9729,14 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.button {
+  font-family: "Raleway", sans-serif; }
+  .button:hover, .button:active {
+    color: #00a67d; }
+
+.scroll-content {
+  margin-top: 40px; }
+
 .no-margin {
   margin: 0 !important; }
 
@@ -9751,7 +9762,7 @@ a.button {
   width: 100%; }
 
 .cleverr-background-color {
-  background: url("http://i.imgur.com/6Z2yT2h.jpg") no-repeat center center;
+  background: url("/img/background.jpg") no-repeat center center;
   background-size: cover;
   background-position-x: 90%;
   background-color: #696969;
@@ -9766,7 +9777,7 @@ ul.swing-stack {
   position: relative; }
 
 li.swing-card {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   position: absolute;
   margin-top: 30px;
   width: 100%;
@@ -9870,3 +9881,7 @@ li.swing-card {
 
 .swiper--action-icon {
   font-size: 32px; }
+
+.menu-container {
+  height: 100%;
+  width: 100%; }

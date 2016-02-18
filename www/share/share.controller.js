@@ -15,7 +15,7 @@
           $ionicHistory.nextViewOptions({
             disableBack: true
           });
-          $state.go('cleverr.swiper');
+          $state.go('cleverr.authenticated.swiper');
       }, function(error) {
           vm.error = "An error occurred";
       });

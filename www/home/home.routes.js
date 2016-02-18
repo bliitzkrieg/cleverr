@@ -8,8 +8,8 @@
       views: {
         "@cleverr": {
           templateUrl: "/home/home.html",
-          controller:"HomeController",
-          controllerAs:'homeCtrl'
+          controller: "HomeController",
+          controllerAs: "homeCtrl"
         }
       }
     });

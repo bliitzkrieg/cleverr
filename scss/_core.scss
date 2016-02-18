@@ -1,0 +1,10 @@
+.button {
+  font-family: $main-font;
+  &:hover, &:active {
+    color: darken($cleverr-main, 5);
+  }
+}
+
+.scroll-content {
+  margin-top: 40px;
+}

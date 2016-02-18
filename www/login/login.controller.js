@@ -8,7 +8,7 @@
     vm.doLogin = function () {
 
       AuthService.loginWithEmail(vm.loginData).then(function() {
-        $state.go('cleverr.swiper');
+        $state.go('cleverr.authenticated.swiper');
       }, function(error) {
         if(error.code === 101) {
           vm.error = "Invalid credentials";

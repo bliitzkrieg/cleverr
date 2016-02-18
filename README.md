@@ -1,25 +1,28 @@
-Ionic App Base
+Cleverr
 =====================
 
-A starting project for Ionic that optionally supports using custom SCSS.
+To get started with this project do the following:
 
-## Using this project
-
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
-
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+- Install Ruby
+-Open a Terminal and run the following:
 
 ```bash
-$ npm install -g ionic
+$ npm install -g ionic gulp-cli bower
+$ npm install
+$ bower install
 ```
 
-Then run:
+-Open two terminal tabs and run one of these command in each
 
 ```bash
-$ ionic start myProject tabs
+$ ionic serve
+$ gulp watch
 ```
 
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
+A server will spin up and you can start developing!
 
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+## Technology
+Gulp
+Ionic
+Angular
+Firebase

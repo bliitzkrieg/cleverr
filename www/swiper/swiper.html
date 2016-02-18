@@ -1,36 +1,29 @@
-<ion-view>
-
-  <ion-nav-buttons side="right">
-    <button menu-toggle="left" class="button button-icon icon ion-navicon balanced"></button>
-  </ion-nav-buttons>
-
-  <ion-content has-header="true" padding="true">
-
-    <ul class="swing-stack" swing-stack>
-      <li class="swing-card" swing-card
-          ng-repeat="idea in swpCtrl.ideas"
-          ng-class="{
-          first: $last, second: $index === swpCtrl.ideas.length - 2,
-          third: $index === swpCtrl.ideas.length - 3, active: idea.isTouched,
-          flyingLeft: idea.goFlyingLeft, flyingRight: idea.goFlyingRight
+<ul class="swing-stack" swing-stack>
+  <li class="swing-card" swing-card
+      ng-repeat="idea in swpCtrl.ideas"
+      ng-class="{
+            first: $last, second: $index === swpCtrl.ideas.length - 2,
+            third: $index === swpCtrl.ideas.length - 3, active: idea.isTouched,
+            flyingLeft: idea.goFlyingLeft, flyingRight: idea.goFlyingRight
           }"
-          swing-on-throwoutleft="swpCtrl.vote(true, idea)"
-          swing-on-throwoutright="swpCtrl.vote(false, idea)"
-          swing-on-throwout="swpCtrl.destroyCard()"
-          >
-        <div class="idea-intro">{{idea.name}}'s idea is</div>
-        <div class="idea-content">{{ idea.content }}</div>
-      </li>
-      <div class="swing-stack-empty" ng-hide="swpCtrl.ideas.length > 0">
-        <div class="ion-android-sync"></div>
-        <div>Fetching More...</div>
-      </div>
-    </ul>
+      swing-on-throwoutleft="swpCtrl.vote(true, idea)"
+      swing-on-throwoutright="swpCtrl.vote(false, idea)"
+      swing-on-throwout="swpCtrl.destroyCard()"
+  >
+    <div class="idea-intro">{{idea.name}}'s idea is</div>
+    <div class="idea-content">{{ idea.content }}</div>
+  </li>
+  <div class="swing-stack-empty" ng-hide="swpCtrl.ideas.length > 0">
+    <div class="ion-android-sync"></div>
+    <div>Fetching More...</div>
+  </div>
+</ul>
 
-    <div class="swiper-options">
-      <div class="swiper--option --good" title="Good Idea" ng-click="swpCtrl.clickVote(true)"><div class="swiper--action-icon ion-heart"></div></div>
-      <div class="swiper--option --bad" title="Bad Idea" ng-click="swpCtrl.clickVote(false)"><div class="swiper--action-icon ion-close-round"></div></div>
-    </div>
-
-  </ion-content>
-</ion-view>
+<div class="swiper-options">
+  <div class="swiper--option --good" title="Good Idea" ng-click="swpCtrl.clickVote(true)">
+    <div class="swiper--action-icon ion-heart"></div>
+  </div>
+  <div class="swiper--option --bad" title="Bad Idea" ng-click="swpCtrl.clickVote(false)">
+    <div class="swiper--action-icon ion-close-round"></div>
+  </div>
+</div>

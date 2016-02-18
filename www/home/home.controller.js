@@ -4,12 +4,9 @@
   function HomeController(AuthService, $state) {
     var vm = this;
 
-    vm.randomNumber = Math.floor((Math.random() * 4) + 1);
-    vm.loginControl = {};
-
     vm.loginWithFacebook = function() {
       AuthService.loginWithFacebook().then(function() {
-        $state.go('cleverr.swiper');
+        $state.go('cleverr.authenticated.swiper');
       }, function(error) {
         console.log(error); //todo: handle error
       });
@@ -17,7 +14,7 @@
 
     vm.loginWithTwitter = function() {
       AuthService.loginWithTwitter().then(function() {
-        $state.go('cleverr.swiper');
+        $state.go('cleverr.authenticated.swiper');
       }, function(error) {
         console.log(error); //todo: handle error
       });

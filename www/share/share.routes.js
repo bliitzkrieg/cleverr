@@ -3,8 +3,8 @@
 
   function routes($stateProvider) {
 
-    $stateProvider.state('cleverr.share', {
-      parent: 'cleverr',
+    $stateProvider.state('cleverr.authenticated.share', {
+      parent: 'cleverr.authenticated',
       url: "/share",
       views: {
         "@cleverr": {

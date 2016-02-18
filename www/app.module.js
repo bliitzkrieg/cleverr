@@ -28,7 +28,7 @@
         $state.go('cleverr.home');
       }
       else if(user && (toState.name === 'cleverr.home' || toState.name === 'cleverr.register' || toState.name === 'cleverr.login')) {
-        $state.go('cleverr.swiper');
+        $state.go('cleverr.authenticated.swiper');
       }
 
     });
@@ -49,7 +49,7 @@
       'cleverr.home',
       'cleverr.fire',
       'cleverr.login',
-      'cleverr.register',
+      'cleverr.authenticated',
       'cleverr.swiper',
       'cleverr.share',
       'cleverr.menu'

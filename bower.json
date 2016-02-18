@@ -6,6 +6,8 @@
   },
   "dependencies": {
     "angular-swing": "*",
-    "lodash": "~4.1.0"
+    "lodash": "~4.1.0",
+    "firebase": "^2.4.1",
+    "angularfire": "^1.1.3"
   }
 }

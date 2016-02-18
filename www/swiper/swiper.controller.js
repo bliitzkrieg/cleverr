@@ -6,12 +6,12 @@
     vm.ideas = Ideas;
 
     vm.vote = function(action, idea) {
-      //FireService.vote(action, idea);
+      FireService.vote(action, idea);
     };
 
     vm.destroyCard = function () {
       $timeout(function() {
-        vm.ideas.splice(-1,1);
+        vm.ideas.splice(-1, 1);
       }, 0);
     };
 
@@ -31,11 +31,11 @@
         vm.ideas.splice(-1,1);
       }, 500);
     };
-
   }
 
   SwiperController.$inject = ['Ideas', 'FireService', '$timeout'];
 
   angular.module('cleverr.swiper.controller', ['gajus.swing', 'cleverr.fire'])
     .controller('SwiperController', SwiperController);
+
 })();
