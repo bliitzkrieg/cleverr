@@ -16,3 +16,7 @@ body {
 .home-view .scroll-content {
   margin-top: 0; // Hack cuz im lazy to fix the actual problem
 }
+
+.button:disabled {
+  background: #ccc !important;
+}

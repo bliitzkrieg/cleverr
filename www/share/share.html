@@ -3,15 +3,15 @@
     {{ shrCtrl.error }}
     <form name="shareForm" ng-submit="shrCtrl.shareIdea()" novalidate>
       <div class="list">
-        <label class="item item-input item-stacked-label">
+        <label class="item item-input item-stacked-label share-input-container">
           <span class="input-label">Share your idea:</span>
-          <textarea ng-model="shrCtrl.idea" placeholder="An app that is used to share ideas..."></textarea>
-          <div style="float:right;margin-right: 10px;font-size:12px;color:#cccccc;">{{shrCtrl.idea.length}} / 300</div>
+          <textarea class="share-input" type="text" ng-model="shrCtrl.idea" placeholder="An app that is used to share ideas..."></textarea>
+          <div class="share-limit"><span ng-class="{ 'txt-red': shrCtrl.idea.length < 100 || shrCtrl.idea.length > 300}">{{ shrCtrl.idea.length }}</span> / 300</div>
         </label>
       </div>
 
-      <label class="item">
-        <button class="button button-block button-stable" type="submit">Share</button>
+      <label>
+        <button class="button button-block button-stable" type="submit" ng-disabled="shrCtrl.idea.length < 100 || shrCtrl.idea.length > 300">Share</button>
       </label>
     </form>
   </ion-content>
