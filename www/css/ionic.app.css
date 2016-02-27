@@ -9746,6 +9746,9 @@ body {
 .button:disabled {
   background: #ccc !important; }
 
+.bar.bar-header {
+  border-bottom: 1px solid #D8D8D8; }
+
 .no-margin {
   margin: 0 !important; }
 
