@@ -9729,6 +9729,9 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+body {
+  font-family: "Raleway", sans-serif; }
+
 .button {
   font-family: "Raleway", sans-serif; }
   .button:hover, .button:active {
@@ -9736,6 +9739,9 @@ a.button {
 
 .scroll-content {
   margin-top: 40px; }
+
+.home-view .scroll-content {
+  margin-top: 0; }
 
 .no-margin {
   margin: 0 !important; }
@@ -9883,5 +9889,100 @@ li.swing-card {
   font-size: 32px; }
 
 .menu-container {
-  height: 100%;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  position: relative; }
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 1px solid #E6E6E6; }
+
+.profile-name {
+  font-size: 22px;
+  margin-top: 20px; }
+
+.slider-menu {
+  margin-top: 20px; }
+  .slider-menu > li {
+    cursor: pointer;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 40px; }
+    .slider-menu > li.active {
+      color: #00BF90; }
+
+.menu-icon {
+  font-size: 25px;
+  display: inline-block;
+  margin-right: 10px; }
+
+.legal-footer {
+  margin: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; }
+  .legal-footer > li {
+    cursor: pointer; }
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px; }
+
+.intro-luca {
+  background: url("/img/luca.png") no-repeat center center;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  margin: 10px 0 20px 0; }
+
+.intro {
   width: 100%; }
+
+.thanks {
+  margin-top: 10px; }
+
+.intro, .thanks {
+  letter-spacing: .3px; }
+
+.votes-container {
+  height: 100vh; }
+
+.no-votes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px; }
+
+.no-vote-icon {
+  font-size: 150px;
+  color: #00BF90;
+  animation-name: heartPulse;
+  animation-iteration-count: infinite;
+  transition: all .2s ease-in-out; }
+
+@keyframes heartPulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1); } }

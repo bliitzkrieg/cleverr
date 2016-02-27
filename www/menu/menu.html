@@ -1,6 +1,20 @@
 <div class="menu-container">
-  test
   <div class="profile">
-    <img ng-src="" alt="">
+    <div class="profile-img" ng-attr-style="background: url('{{ menuCtrl.image }}') no-repeat center center; background-size: cover;"></div>
+    <div class="profile-name">{{ menuCtrl.user }}</div>
   </div>
+
+  <ul class="slider-menu">
+    <li ui-sref="cleverr.authenticated.swiper" ui-sref-active="active"><div class="icon ion-home menu-icon"></div> Home</li>
+    <li ui-sref="cleverr.authenticated.share" ui-sref-active="active"><div class="icon ion-share menu-icon"></div> Share an Idea</li>
+    <li ui-sref="cleverr.authenticated.ideas" ui-sref-active="active"><div class="icon ion-trophy menu-icon"></div> Your Ideas</li>
+    <li ui-sref="cleverr.authenticated.votes" ui-sref-active="active"><div class="icon ion-heart menu-icon"></div> Your Votes</li>
+    <li ui-sref="cleverr.authenticated.about" ui-sref-active="active"><div class="icon ion-information-circled menu-icon"></div> About</li>
+    <li ng-click="menuCtrl.logout()"><div class="icon ion-log-out menu-icon"></div> Log Out</li>
+  </ul>
+
+  <ul class="legal-footer">
+    <li>Privacy Policy</li>
+    <li>Terms Of Service</li>
+  </ul>
 </div>

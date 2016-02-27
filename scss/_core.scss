@@ -1,3 +1,7 @@
+body {
+  font-family: $main-font;
+}
+
 .button {
   font-family: $main-font;
   &:hover, &:active {
@@ -7,4 +11,8 @@
 
 .scroll-content {
   margin-top: 40px;
+}
+
+.home-view .scroll-content {
+  margin-top: 0; // Hack cuz im lazy to fix the actual problem
 }

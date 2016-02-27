@@ -1,4 +1,60 @@
 .menu-container {
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  padding: 20px;
+  position: relative;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 1px solid #E6E6E6;
+}
+
+.profile-name {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.slider-menu {
+  margin-top: 20px;
+  > li {
+    cursor: pointer;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 40px;
+    &.active {
+      color: $cleverr-main
+    }
+  }
+}
+
+.menu-icon {
+  font-size: 25px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.legal-footer {
+  margin: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  > li {
+    cursor: pointer;
+  }
 }

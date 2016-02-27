@@ -3,6 +3,7 @@
 
   function FireService(AuthService, $firebaseArray, $q) {
     var ref = new Firebase('https://sizzling-inferno-6353.firebaseio.com/');
+    var user = AuthService.currentUser();
 
     function postIdea(idea) {
       var deferred = $q.defer();
@@ -52,7 +53,6 @@
     }
 
     function vote(action, idea) {
-      var user = AuthService.currentUser();
       var deferred = $q.defer();
       $firebaseArray(ref.child("votes")).$loaded().then(function(votes) {
         var vote = {};
@@ -74,10 +74,34 @@
       });
     }
 
+    function getMyIdeas() {
+
+    }
+
+    function getMyVotes() {
+      var deferred = $q.defer();
+
+      $firebaseArray(ref.child("ideas")).$loaded().then(function(ideas) {
+
+        $firebaseArray(ref.child("users/" + user.uid + "/voted_on/")).$loaded().then(function(user_voted) {
+          var ids = _.map(user_voted, '$id');
+          var results = _.filter(ideas, function(item) { return _.indexOf(ids, item.$id) >= 0; });
+          deferred.resolve(results);
+        });
+
+      }, function(error) {
+        deferred.reject(error);
+      });
+
+      return deferred.promise;
+    }
+
     return {
       postIdea:postIdea,
       getIdeas:getIdeas,
-      vote:vote
+      vote:vote,
+      getMyVotes: getMyVotes,
+      getMyIdeas: getMyIdeas
     };
   }
 

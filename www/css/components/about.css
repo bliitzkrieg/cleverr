@@ -1,0 +1,23 @@
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px; }
+
+.intro-luca {
+  background: url("/img/luca.png") no-repeat center center;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  margin: 10px 0 20px 0; }
+
+.intro {
+  width: 100%; }
+
+.thanks {
+  margin-top: 10px; }
+
+.intro, .thanks {
+  letter-spacing: .3px; }

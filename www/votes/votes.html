@@ -1,0 +1,20 @@
+<div class="votes-container">
+
+  <div class="no-votes" ng-if="vtCtrl.votes.length !== 0">
+    <div class="icon ion-heart-broken no-vote-icon"></div>
+    <div>
+      Looks like you haven't voted yet...No worries though!
+      <br/><br/>
+      Start voting <a class="txt-green" ui-sref="cleverr.authenticated.swiper">here</a>!
+    </div>
+  </div>
+
+  <div class="all-the-votes" ng-if="vtCtrl.votes.length !== 0" style="display: none">
+    <ul class="vote-container">
+      <li class="vote" ng-repeat="vote in vtCtrl.votes">
+        {{ vote.content }}
+      </li>
+    </ul>
+  </div>
+
+</div>

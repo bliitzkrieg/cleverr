@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  function runBlock($rootScope, $ionicPlatform, AuthService, $state, $ionicHistory) {
+  function runBlock($rootScope, $ionicPlatform, AuthService, $state, $ionicHistory, $ionicSideMenuDelegate) {
 
     $ionicPlatform.ready(function () {
 
@@ -31,6 +31,10 @@
         $state.go('cleverr.authenticated.swiper');
       }
 
+      if($ionicSideMenuDelegate.isOpenRight()) {
+        $ionicSideMenuDelegate.toggleRight();
+      }
+
     });
 
     $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error){
@@ -38,7 +42,7 @@
     });
   }
 
-  runBlock.$inject = ['$rootScope', '$ionicPlatform', 'AuthService', '$state', '$ionicHistory'];
+  runBlock.$inject = ['$rootScope', '$ionicPlatform', 'AuthService', '$state', '$ionicHistory', '$ionicSideMenuDelegate'];
 
   angular.module('cleverr', [
       'ionic',
@@ -52,7 +56,10 @@
       'cleverr.authenticated',
       'cleverr.swiper',
       'cleverr.share',
-      'cleverr.menu'
+      'cleverr.menu',
+      'cleverr.votes',
+      'cleverr.ideas',
+      'cleverr.about'
     ])
     .run(runBlock);
 

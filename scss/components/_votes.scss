@@ -1,0 +1,30 @@
+.votes-container {
+  height: 100vh;
+}
+
+.no-votes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.no-vote-icon {
+  font-size: 150px;
+  color: $cleverr-main;
+  animation-name: heartPulse;
+  animation-iteration-count: infinite;
+  transition: all .2s ease-in-out;
+}
+
+@keyframes heartPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
