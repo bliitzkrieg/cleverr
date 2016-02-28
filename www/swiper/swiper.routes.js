@@ -5,7 +5,7 @@
 
     $stateProvider.state('cleverr.authenticated.swiper', {
       url: "/swiper",
-      templateUrl: "/swiper/swiper.html",
+      templateUrl: "./swiper/swiper.html",
       controller: "SwiperController",
       controllerAs: 'swpCtrl',
       resolve: {

@@ -8,7 +8,7 @@
         abstract: true,
         views: {
           "@": {
-            templateUrl: "/layout/shell.html"
+            templateUrl: "./layout/shell.html"
           }
         }
       });

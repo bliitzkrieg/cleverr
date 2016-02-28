@@ -1,3 +1,10 @@
+.share-container {
+  height: 100vh;
+  width: calc(100vw - 20px); // Hack to fix width on share page.
+  margin: 60px 10px 0 10px;
+  overflow: visible !important;
+}
+
 .share-limit {
   float:right;
   margin-right: 10px;

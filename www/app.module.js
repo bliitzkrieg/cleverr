@@ -27,8 +27,8 @@
         event.preventDefault();
         $state.go('cleverr.home');
       }
-      else if(user && (toState.name === 'cleverr.home' || toState.name === 'cleverr.register' || toState.name === 'cleverr.login')) {
-        $state.go('cleverr.authenticated.swiper');
+      else if(user && toState.name === 'cleverr.home') {
+        $state.transitionTo('cleverr.authenticated.swiper');
       }
 
       if($ionicSideMenuDelegate.isOpenRight()) {

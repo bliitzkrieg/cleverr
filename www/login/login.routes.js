@@ -7,7 +7,7 @@
       url: "/login",
       views: {
         "@cleverr": {
-          templateUrl: "/login/login.html",
+          templateUrl: "./login/login.html",
           controller: "LoginController",
           controllerAs:'logCtrl'
         }

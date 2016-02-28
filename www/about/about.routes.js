@@ -5,7 +5,7 @@
 
     $stateProvider.state('cleverr.authenticated.about', {
       url: "/about",
-      templateUrl: "/about/about.html",
+      templateUrl: "./about/about.html",
       controller: "AboutController",
       controllerAs: 'abtCtrl',
       authenticate: true

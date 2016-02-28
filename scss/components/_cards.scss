@@ -33,12 +33,12 @@ li.swing-card {
   }
   &.flyingLeft {
     -webkit-animation-name: flyOffScreenLeft;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 0.5s;
     -webkit-transition-timing-function: steps;
   }
   &.flyingRight {
     -webkit-animation-name: flyOffScreenRight;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 0.5s;
     -webkit-transition-timing-function: steps;
   }
 }
@@ -87,17 +87,21 @@ li.swing-card {
 @-webkit-keyframes flyOffScreenLeft {
   from {
     -webkit-transform: rotate(0deg) translateX(0px);
+    opacity: 1;
   }
   to {
     -webkit-transform: rotate(-20deg) translateX(-900px);
+    opacity: 0;
   }
 }
 
 @-webkit-keyframes flyOffScreenRight {
   from {
+    opacity: 1;
     -webkit-transform: rotate(0deg) translateX(0px);
   }
   to {
+    opacity: 0;
     -webkit-transform: rotate(-20deg) translateX(900px);
   }
 }

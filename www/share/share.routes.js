@@ -8,7 +8,7 @@
       url: "/share",
       views: {
         "@cleverr": {
-          templateUrl: "/share/share.html",
+          templateUrl: "./share/share.html",
           controller: "ShareController",
           controllerAs: 'shrCtrl'
         }

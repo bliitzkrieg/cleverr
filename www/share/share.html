@@ -1,18 +1,16 @@
-<ion-view style="padding-top: 40px">
-  <ion-content padding="true">
-    {{ shrCtrl.error }}
-    <form name="shareForm" ng-submit="shrCtrl.shareIdea()" novalidate>
-      <div class="list">
-        <label class="item item-input item-stacked-label share-input-container">
-          <span class="input-label">Share your idea:</span>
-          <textarea class="share-input" type="text" ng-model="shrCtrl.idea" placeholder="An app that is used to share ideas..."></textarea>
-          <div class="share-limit"><span ng-class="{ 'txt-red': shrCtrl.idea.length < 100 || shrCtrl.idea.length > 300}">{{ shrCtrl.idea.length }}</span> / 300</div>
-        </label>
-      </div>
-
-      <label>
-        <button class="button button-block button-stable" type="submit" ng-disabled="shrCtrl.idea.length < 100 || shrCtrl.idea.length > 300">Share</button>
+<div class="share-container">
+  {{ shrCtrl.error }}
+  <form name="shareForm" ng-submit="shrCtrl.shareIdea()" novalidate>
+    <div class="list">
+      <label class="item item-input item-stacked-label share-input-container">
+        <span class="input-label">Share your idea:</span>
+        <textarea class="share-input" type="text" ng-model="shrCtrl.idea" placeholder="An app that is used to share ideas..."></textarea>
+        <div class="share-limit"><span ng-class="{ 'txt-red': shrCtrl.idea.length < 100 || shrCtrl.idea.length > 300}">{{ shrCtrl.idea.length }}</span> / 300</div>
       </label>
-    </form>
-  </ion-content>
-</ion-view>
+    </div>
+
+    <label>
+      <button class="button button-block button-stable" type="submit" ng-disabled="shrCtrl.idea.length < 100 || shrCtrl.idea.length > 300">Share</button>
+    </label>
+  </form>
+</div>

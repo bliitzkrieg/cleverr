@@ -9,12 +9,12 @@
       url: "/user",
       views: {
         "@cleverr": {
-          templateUrl: "/authenticated/authenticated.html",
+          templateUrl: "./authenticated/authenticated.html",
           controller: "AuthenticatedController",
           controllerAs: "authCtrl"
         },
         "menu@cleverr": {
-          templateUrl: "/menu/menu.html",
+          templateUrl: "./menu/menu.html",
           controller: "MenuController",
           controllerAs: "menuCtrl"
         }

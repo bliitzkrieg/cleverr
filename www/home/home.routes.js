@@ -7,7 +7,7 @@
       url: "/",
       views: {
         "@cleverr": {
-          templateUrl: "/home/home.html",
+          templateUrl: "./home/home.html",
           controller: "HomeController",
           controllerAs: "homeCtrl"
         }

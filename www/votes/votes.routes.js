@@ -5,7 +5,7 @@
 
     $stateProvider.state('cleverr.authenticated.votes', {
       url: "/votes",
-      templateUrl: "/votes/votes.html",
+      templateUrl: "./votes/votes.html",
       controller: "VotesController",
       controllerAs: 'vtCtrl',
       resolve: {

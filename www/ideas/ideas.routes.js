@@ -5,7 +5,7 @@
 
     $stateProvider.state('cleverr.authenticated.ideas', {
       url: "/ideas",
-      templateUrl: "/ideas/ideas.html",
+      templateUrl: "./ideas/ideas.html",
       controller: "IdeaController",
       controllerAs: 'idaCtrl',
       resolve: {

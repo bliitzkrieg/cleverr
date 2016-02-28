@@ -6,7 +6,7 @@
     vm.ideas = Ideas;
 
     vm.vote = function(action, idea) {
-      FireService.vote(action, idea);
+      //FireService.vote(action, idea);
     };
 
     vm.destroyCard = function () {
@@ -25,11 +25,20 @@
       }
 
       $timeout(function() {
-        vm.ideas[vm.ideas.length - 1].goFlyingLeft = false;
-        vm.ideas[vm.ideas.length - 1].goFlyingRight = false;
-        vm.vote(action, vm.ideas[vm.ideas.length - 1]);
+       // vm.vote(action, vm.ideas[vm.ideas.length - 1]);
         vm.ideas.splice(-1,1);
-      }, 500);
+      }, 300);
+    };
+
+    vm.options = {
+      //minThrowOutDistance: function() {
+      //  return 1;
+      //},
+      throwOutConfidence: function (offset, element) {
+        if (offset > 200) {
+          return 1
+        }
+      }
     };
   }
 
